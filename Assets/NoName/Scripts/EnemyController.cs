@@ -10,6 +10,8 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] private LayerMask whatIsPlayer;
     [SerializeField] private float attackCheck;
+    public GameObject bulletPrefab;
+    [SerializeField] private Transform firePoint;
 
     [Header("Stats")]
     [SerializeField] private Vector2 minMaxSpeed;
@@ -21,6 +23,8 @@ public class EnemyController : MonoBehaviour
     private Slider slider;
     private Rigidbody2D rb;
     private Animator anim;
+
+
 
     public static Action updateHealthBar;
 
@@ -54,6 +58,11 @@ public class EnemyController : MonoBehaviour
             anim.SetTrigger("Attack");
             rb.velocity = Vector2.zero;
         }
+
+        if(Human.instance.GetCurrentHealth() <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void UpdateHealthBar()
@@ -70,10 +79,12 @@ public class EnemyController : MonoBehaviour
             currentHealth -= damageAmount;
 
             updateHealthBar?.Invoke();
+            StartCoroutine(HurtFX());
 
-            if(currentHealth <= 0)
+            if (currentHealth <= 0)
             {
                 Destroy(gameObject);
+                DataManager.instance.AddCoins(10);
             }
         }
     }
@@ -86,8 +97,19 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawRay(transform.position, Vector2.left * attackCheck);
     }
 
-    public void AttackTrigger()
+    private IEnumerator HurtFX()
     {
-        Human.instance.TakeDamage(damage);
+        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
+        Color originalColor = sr.color;
+        sr.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        sr.color = Color.white;
+
+
+    }
+
+    public Transform FirePoint()
+    {
+        return firePoint;
     }
 }

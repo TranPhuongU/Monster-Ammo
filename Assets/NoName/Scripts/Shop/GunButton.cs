@@ -1,10 +1,13 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class GunButton : MonoBehaviour
+public class GunButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
+    [HideInInspector] public int gunIndex;
+
 
     [Header("Elements")]
     [SerializeField] private Button thisButton;
@@ -60,5 +63,25 @@ public class GunButton : MonoBehaviour
     public Button GetButton()
     {
         return thisButton;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        UIManager.instance.ShowGunInfo(gunIndex);
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        UIManager.instance.HideGunInfo();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        UIManager.instance.ShowGunInfo(gunIndex);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        UIManager.instance.HideGunInfo();
     }
 }

@@ -11,6 +11,7 @@ public class Human : MonoBehaviour
     public List<GameObject> magazine = new List<GameObject>();
     [SerializeField] private GunData currentGun;
     [SerializeField] private SpriteRenderer gunSprite;
+    [SerializeField] private Transform firePoint;
     [SerializeField] private float attackCheckDistance ;
 
     [SerializeField] private ParticleSystem shootEffect;
@@ -25,10 +26,10 @@ public class Human : MonoBehaviour
     private Slider healthBarSlide;
     [SerializeField] private ObjectPool bulletPool;
     [SerializeField] private LayerMask whatIsEnemy;
-    [SerializeField] Transform firePoint;
     private float timer;
 
     public static Action updateHealthBar;
+    public static Action onShoot;
 
     private void Awake()
     {
@@ -39,12 +40,15 @@ public class Human : MonoBehaviour
 
 
         updateHealthBar += UpdateHealthBar;
+        ShopManager.onSkinSelected += SelectedGun;
 
     }
 
     private void OnDestroy()
     {
         updateHealthBar -= UpdateHealthBar;
+        ShopManager.onSkinSelected -= SelectedGun;
+
 
     }
     private void Start()
@@ -57,6 +61,40 @@ public class Human : MonoBehaviour
         healthBarSlide.value = currentHealth;
 
         int selectedGunIndex = PlayerPrefs.GetInt("SelectedGunIndex", 0);
+        SelectedGun(selectedGunIndex);
+    }
+
+    private void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            PlayerPrefs.DeleteAll();
+        }
+
+
+        timer -= Time.deltaTime;
+
+        if (EnemyDetected())
+        {
+            float baseCooldown = currentGun != null ? currentGun.cooldown : cooldown;
+
+            // Nếu có tiếp tế, giảm cooldown theo cấp số mũ (giảm dần nhẹ hơn)
+            float currentCooldown = magazine.Count > 0
+                ? baseCooldown / Mathf.Pow(1.1f, magazine.Count)
+                : baseCooldown;
+
+
+            if (timer <= 0)
+            {
+                Shoot();
+                timer = currentCooldown;
+            }
+        }
+    }
+
+    public void SelectedGun(int selectedGunIndex)
+    {
         GunData[] allGuns = GameManager.instance.allGuns; // hoặc truyền từ ShopManager
 
         if (allGuns != null && selectedGunIndex < allGuns.Length)
@@ -66,28 +104,6 @@ public class Human : MonoBehaviour
             shootEffectTransform.localPosition = allGuns[selectedGunIndex].firePointOffset;
 
             gunSprite.sprite = currentGun.gunSprite;
-        }
-    }
-
-    private void Update()
-    {
-        timer -= Time.deltaTime;
-
-        if (EnemyDetected())
-        {
-            float baseCooldown = currentGun != null ? currentGun.cooldown : cooldown;
-
-            // Nếu có tiếp tế, giảm cooldown theo cấp số mũ (giảm dần nhẹ hơn)
-            float currentCooldown = magazine.Count > 0
-                ? baseCooldown / Mathf.Pow(1.02f, magazine.Count)
-                : baseCooldown;
-
-
-            if (timer <= 0)
-            {
-                Shoot();
-                timer = currentCooldown;
-            }
         }
     }
 
@@ -103,6 +119,8 @@ public class Human : MonoBehaviour
 
     private void Shoot()
     {
+        onShoot?.Invoke();
+
         var main = shootEffect.main;
         float duration = main.duration;
         float baseCooldown = currentGun != null ? currentGun.cooldown : cooldown;
@@ -130,10 +148,18 @@ public class Human : MonoBehaviour
             GameObject bullet = bulletPool.GetObject();
             bullet.transform.position = firePoint.position;
             bullet.GetComponent<HumanBullet>().Damage(bulletDamage);
+            if (magazine.Count >= 2)
+            {
+                magazine.RemoveAt(0); // xóa viên đầu tiên
+                magazine.RemoveAt(0); // xóa viên đầu tiên kế tiếp (sau khi danh sách đã dịch trái)
+            }
+            else if (magazine.Count == 1)
+            {
+                magazine.RemoveAt(0); // chỉ còn 1 viên thôi thì xóa luôn
+            }
+
         }
 
-        if (magazine.Count > 0)
-            magazine.RemoveAt(0);
     }
 
 
@@ -158,12 +184,26 @@ public class Human : MonoBehaviour
         currentHealth -= damage;
         updateHealthBar?.Invoke();
 
+        StartCoroutine(HurtFX());
+
         if (currentHealth <= 0)
         {
             GameManager.instance.SetGameState(GameManager.GameState.Gameover);
         }
     }
+    private IEnumerator HurtFX()
+    {
+        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
+        Color originalColor = sr.color;
+        sr.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        sr.color = Color.white;
+    }
 
+    public float GetCurrentHealth()
+    {
+        return currentHealth;
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

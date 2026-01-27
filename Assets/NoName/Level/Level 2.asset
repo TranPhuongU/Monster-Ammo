@@ -15,11 +15,69 @@ MonoBehaviour:
   waves:
   - enemies:
     - prefab: {fileID: 6096315983165933215, guid: 1f42dc995c9c844449fcf7738b2ad1af, type: 3}
-      amount: 10
+      amount: 70
+      minSpawnDelay: 0.4
+      maxSpawnDelay: 0.6
+    - prefab: {fileID: 6128060630263145030, guid: 90b9f990867690f40b811e5245803888, type: 3}
+      amount: 30
       minSpawnDelay: 0.5
-      maxSpawnDelay: 1.5
+      maxSpawnDelay: 1
+    - prefab: {fileID: 330791364432913367, guid: baa58e16f5c48d7439e5be5970dcaee3, type: 3}
+      amount: 50
+      minSpawnDelay: 0.2
+      maxSpawnDelay: 0.6
   - enemies:
     - prefab: {fileID: 330791364432913367, guid: baa58e16f5c48d7439e5be5970dcaee3, type: 3}
-      amount: 5
-      minSpawnDelay: 0.3
+      amount: 70
+      minSpawnDelay: 0.1
+      maxSpawnDelay: 0.3
+    - prefab: {fileID: 6096315983165933215, guid: 1f42dc995c9c844449fcf7738b2ad1af, type: 3}
+      amount: 120
+      minSpawnDelay: 0.1
+      maxSpawnDelay: 0.3
+    - prefab: {fileID: 6128060630263145030, guid: 90b9f990867690f40b811e5245803888, type: 3}
+      amount: 30
+      minSpawnDelay: 0.1
+      maxSpawnDelay: 0.7
+    - prefab: {fileID: 2454893440955894049, guid: 8b9699204adc8b345b63cf1810a9192a, type: 3}
+      amount: 30
+      minSpawnDelay: 0.1
+      maxSpawnDelay: 0.5
+  - enemies:
+    - prefab: {fileID: 330791364432913367, guid: baa58e16f5c48d7439e5be5970dcaee3, type: 3}
+      amount: 90
+      minSpawnDelay: 0.1
+      maxSpawnDelay: 0.2
+    - prefab: {fileID: 6096315983165933215, guid: 1f42dc995c9c844449fcf7738b2ad1af, type: 3}
+      amount: 140
+      minSpawnDelay: 0.1
+      maxSpawnDelay: 0.2
+    - prefab: {fileID: 6128060630263145030, guid: 90b9f990867690f40b811e5245803888, type: 3}
+      amount: 30
+      minSpawnDelay: 0.1
       maxSpawnDelay: 1
+    - prefab: {fileID: 2454893440955894049, guid: 8b9699204adc8b345b63cf1810a9192a, type: 3}
+      amount: 60
+      minSpawnDelay: 0.1
+      maxSpawnDelay: 0.4
+  - enemies:
+    - prefab: {fileID: 330791364432913367, guid: baa58e16f5c48d7439e5be5970dcaee3, type: 3}
+      amount: 140
+      minSpawnDelay: 0.1
+      maxSpawnDelay: 0.2
+    - prefab: {fileID: 6096315983165933215, guid: 1f42dc995c9c844449fcf7738b2ad1af, type: 3}
+      amount: 200
+      minSpawnDelay: 0.1
+      maxSpawnDelay: 0.2
+    - prefab: {fileID: 6128060630263145030, guid: 90b9f990867690f40b811e5245803888, type: 3}
+      amount: 70
+      minSpawnDelay: 0.1
+      maxSpawnDelay: 0.2
+    - prefab: {fileID: 2454893440955894049, guid: 8b9699204adc8b345b63cf1810a9192a, type: 3}
+      amount: 80
+      minSpawnDelay: 0.1
+      maxSpawnDelay: 0.2
+    - prefab: {fileID: 4958618262810520595, guid: 523470408de56864f8f5944b9adcbead, type: 3}
+      amount: 2
+      minSpawnDelay: 1
+      maxSpawnDelay: 3

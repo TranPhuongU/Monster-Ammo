@@ -5,4 +5,5 @@ using UnityEngine;
 public class LevelData : ScriptableObject
 {
     public List<WaveData> waves;
+
 }

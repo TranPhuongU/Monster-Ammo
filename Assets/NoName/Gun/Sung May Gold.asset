@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e761a20dc82d74e902abbb2e8b98cc, type: 3}
   m_Name: Sung May Gold
   m_EditorClassIdentifier: 
-  gunName: Sung Truong
+  gunName: AK-74 gold
   cooldown: 0.4
   bulletsPerShot: 2
-  damage: 20
+  damage: 200
   gunSprite: {fileID: 21300000, guid: d79e6895d0a70ba40bd80bf4c74e7238, type: 3}
   firePointOffset: {x: 0.2876, y: 0.0371}

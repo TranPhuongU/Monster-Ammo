@@ -27,17 +27,20 @@ public class GameManager : MonoBehaviour
             instance = this;
     }
 
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            PlayerPrefs.DeleteAll();
-        }
+        SetGameState(GameState.Menu);
+
     }
 
     public void SetGameState(GameState _gameState)
     {
         this.gameState = _gameState;
         onGameStateChanged?.Invoke(_gameState);
+    }
+
+    public GameState GetCurrentState()
+    {
+        return gameState;
     }
 }

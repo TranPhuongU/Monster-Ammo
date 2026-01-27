@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e761a20dc82d74e902abbb2e8b98cc, type: 3}
+  m_Name: HandGun2
+  m_EditorClassIdentifier: 
+  gunName: HandGun
+  cooldown: 1
+  bulletsPerShot: 1
+  damage: 300
+  gunSprite: {fileID: 21300000, guid: 1616e4908b7c0284997f328329c92b1b, type: 3}
+  firePointOffset: {x: 0.1382, y: 0.0388}

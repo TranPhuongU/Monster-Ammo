@@ -1,0 +1,696 @@
+fileFormatVersion: 2
+guid: cfab64438e475d149a415963a677fcf9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5309383929421371694
+    second: BoomFix_0
+  - first:
+      213: -4374620498997006227
+    second: BoomFix_1
+  - first:
+      213: -1700921098334013992
+    second: BoomFix_2
+  - first:
+      213: -5184188708565144447
+    second: BoomFix_3
+  - first:
+      213: -2886478280540368376
+    second: BoomFix_4
+  - first:
+      213: 6553429993501962019
+    second: BoomFix_5
+  - first:
+      213: -3188417264898837219
+    second: BoomFix_6
+  - first:
+      213: 1353658304584895807
+    second: BoomFix_7
+  - first:
+      213: -6472806231354337330
+    second: BoomFix_8
+  - first:
+      213: -5706378363593916084
+    second: BoomFix_9
+  - first:
+      213: 983060725846110259
+    second: BoomFix_10
+  - first:
+      213: -1211603996929494326
+    second: BoomFix_11
+  - first:
+      213: -7782194306842654358
+    second: BoomFix_12
+  - first:
+      213: 2844533222944522517
+    second: BoomFix_13
+  - first:
+      213: 5508061065562277630
+    second: BoomFix_14
+  - first:
+      213: -5288518073446461794
+    second: BoomFix_15
+  - first:
+      213: -1428220014437412264
+    second: BoomFix_16
+  - first:
+      213: -3577611828825533218
+    second: BoomFix_17
+  - first:
+      213: 2152735427937689492
+    second: BoomFix_18
+  - first:
+      213: 4868665387859231594
+    second: BoomFix_19
+  - first:
+      213: 2448089098358905565
+    second: BoomFix_20
+  - first:
+      213: 1115473835543298445
+    second: BoomFix_21
+  - first:
+      213: 3417833192700634366
+    second: BoomFix_22
+  - first:
+      213: -6773985427387986626
+    second: BoomFix_23
+  - first:
+      213: -8981964461243400557
+    second: BoomFix_24
+  - first:
+      213: -4572915679303594341
+    second: BoomFix_25
+  - first:
+      213: -846599521950610542
+    second: BoomFix_26
+  - first:
+      213: 148845855493513084
+    second: BoomFix_27
+  - first:
+      213: 8492497978193737119
+    second: BoomFix_28
+  - first:
+      213: 4240643946264973241
+    second: BoomFix_29
+  - first:
+      213: 6852424673112507477
+    second: BoomFix_30
+  - first:
+      213: -4652469600783986722
+    second: BoomFix_31
+  - first:
+      213: 586975631020429827
+    second: BoomFix_32
+  - first:
+      213: 5707055596314301967
+    second: BoomFix_33
+  - first:
+      213: -8581064786426337774
+    second: BoomFix_34
+  - first:
+      213: 4955463328054189080
+    second: BoomFix_35
+  - first:
+      213: 3787584003537742972
+    second: BoomFix_36
+  - first:
+      213: -3918900418599695254
+    second: BoomFix_37
+  - first:
+      213: -4760159986651623703
+    second: BoomFix_38
+  - first:
+      213: 1029490340086046270
+    second: BoomFix_39
+  - first:
+      213: -8537938784575708701
+    second: BoomFix_40
+  - first:
+      213: -4829070577587435874
+    second: BoomFix_41
+  - first:
+      213: -850774062034183330
+    second: BoomFix_42
+  - first:
+      213: 2845939146611708681
+    second: BoomFix_43
+  - first:
+      213: 6811790890040838481
+    second: BoomFix_44
+  - first:
+      213: 4455917288751014198
+    second: BoomFix_45
+  - first:
+      213: -3877713306763447209
+    second: BoomFix_46
+  - first:
+      213: -2514640659250477134
+    second: BoomFix_47
+  - first:
+      213: 6139258412917189794
+    second: BoomFix_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BoomFix_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e291451bd88bea940800000000000000
+      internalID: 5309383929421371694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d60342a75d93a43c0800000000000000
+      internalID: -4374620498997006227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_2
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d575ded54d1568e0800000000000000
+      internalID: -1700921098334013992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_3
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c226926df0e08b0800000000000000
+      internalID: -5184188708565144447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_4
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 802d28c0c4b21f7d0800000000000000
+      internalID: -2886478280540368376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_5
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f23178bd572fa50800000000000000
+      internalID: 6553429993501962019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_6
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d157bf9f36770c3d0800000000000000
+      internalID: -3188417264898837219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_7
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d4a085e0929c210800000000000000
+      internalID: 1353658304584895807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_8
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec79038e609fb26a0800000000000000
+      internalID: -6472806231354337330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_9
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c41820cac1fdec0b0800000000000000
+      internalID: -5706378363593916084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_10
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 330f1bc858884ad00800000000000000
+      internalID: 983060725846110259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_11
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2f29a85948f2fe0800000000000000
+      internalID: -1211603996929494326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_12
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a69839f7287100490800000000000000
+      internalID: -7782194306842654358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_13
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 511c76135efc97720800000000000000
+      internalID: 2844533222944522517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_14
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef6cffd2b50907c40800000000000000
+      internalID: 5508061065562277630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_15
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9e8dfbf4d86b96b0800000000000000
+      internalID: -5288518073446461794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_16
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 852da52c671fd2ce0800000000000000
+      internalID: -1428220014437412264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoomFix_17
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 0
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed45e962ff4c95ec0800000000000000
+      internalID: -3577611828825533218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 605f70f9db8c90e4bbbf720b2a5cd4e7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BoomFix_0: 5309383929421371694
+      BoomFix_1: -4374620498997006227
+      BoomFix_10: 983060725846110259
+      BoomFix_11: -1211603996929494326
+      BoomFix_12: -7782194306842654358
+      BoomFix_13: 2844533222944522517
+      BoomFix_14: 5508061065562277630
+      BoomFix_15: -5288518073446461794
+      BoomFix_16: -1428220014437412264
+      BoomFix_17: -3577611828825533218
+      BoomFix_2: -1700921098334013992
+      BoomFix_3: -5184188708565144447
+      BoomFix_4: -2886478280540368376
+      BoomFix_5: 6553429993501962019
+      BoomFix_6: -3188417264898837219
+      BoomFix_7: 1353658304584895807
+      BoomFix_8: -6472806231354337330
+      BoomFix_9: -5706378363593916084
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

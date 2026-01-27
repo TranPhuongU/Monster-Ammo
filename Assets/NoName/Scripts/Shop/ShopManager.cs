@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,9 +9,13 @@ using Random = UnityEngine.Random;
 
 public class ShopManager : MonoBehaviour
 {
+    public static ShopManager instance;
+
+   
+
     [Header("Elements")]
     [SerializeField] private Button buyButton;
-    [SerializeField] private GunButton[] gunButtons;
+    public GunButton[] gunButtons;
 
     [Header("Skins")]
     [SerializeField] private Sprite[] skins;
@@ -23,6 +28,11 @@ public class ShopManager : MonoBehaviour
 
     private void Awake()
     {
+        if (instance != null)
+            Destroy(gameObject);
+        else
+            instance = this;
+
         UnlockSkin(0);
 
         priceText.text = skinPrice.ToString();
@@ -57,6 +67,9 @@ public class ShopManager : MonoBehaviour
             int skinIndex = i;
 
             gunButtons[i].GetButton().onClick.AddListener(() => SelectSkin(skinIndex));
+
+            gunButtons[i].gunIndex = i;
+
         }
     }
 
@@ -82,10 +95,12 @@ public class ShopManager : MonoBehaviour
                 gunButtons[i].Deselect();
         }
 
+        onSkinSelected?.Invoke(skinIndex);
+
         PlayerPrefs.SetInt("SelectedGunIndex", skinIndex); // Lưu lựa chọn vào PlayerPrefs
         PlayerPrefs.Save(); // Đảm bảo lưu ngay
 
-        onSkinSelected?.Invoke(skinIndex);
+
     }
 
     public void BuySkin()
@@ -118,4 +133,7 @@ public class ShopManager : MonoBehaviour
         else
             buyButton.interactable = true;
     }
+
+   
+
 }

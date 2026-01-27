@@ -1,16 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class DataManager : MonoBehaviour
 {
     public static DataManager instance;
 
     [Header("Coin Texts")]
-    [SerializeField] private Text[] coinsTexts;
-    private int coins;
+    [SerializeField] private TextMeshProUGUI[] moneysText;
+
+    private int money;
+    private Coroutine animateCoroutine;
+
     private void Awake()
     {
         if (instance != null)
@@ -18,47 +19,67 @@ public class DataManager : MonoBehaviour
         else
             instance = this;
 
-        coins = PlayerPrefs.GetInt("coins", 100);
+        money = PlayerPrefs.GetInt("coins", 1000);
     }
-    // Start is called before the first frame update
+
     void Start()
     {
-        UpdateCoinsTexts();
+        UpdateCoinsTextsInstant();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void UpdateCoinsTextsInstant()
     {
-
-    }
-
-    private void UpdateCoinsTexts()
-    {
-        foreach (Text cointText in coinsTexts)
-        {
-            cointText.text = coins.ToString();
-        }
+        foreach (TextMeshProUGUI moneyText in moneysText)
+            moneyText.text = money.ToString();
     }
 
     public void AddCoins(int _amount)
     {
-        coins += _amount;
-        UpdateCoinsTexts();
+        int oldMoney = money;
+        money += _amount;
+        PlayerPrefs.SetInt("coins", money);
 
-        PlayerPrefs.SetInt("coins", coins);
-    }
+        if (animateCoroutine != null)
+            StopCoroutine(animateCoroutine);
 
-    public int GetCoins()
-    {
-        return coins;
+        animateCoroutine = StartCoroutine(AnimateMoneyText(oldMoney, money));
     }
 
     public void UseCoins(int amount)
     {
-        coins -= amount;
+        int oldMoney = money;
+        money -= amount;
+        PlayerPrefs.SetInt("coins", money);
 
-        UpdateCoinsTexts();
+        if (animateCoroutine != null)
+            StopCoroutine(animateCoroutine);
 
-        PlayerPrefs.SetInt("coins", coins);
+        animateCoroutine = StartCoroutine(AnimateMoneyText(oldMoney, money));
+    }
+
+    private IEnumerator AnimateMoneyText(int startValue, int endValue)
+    {
+        float duration = 0.5f; // thời gian chạy hiệu ứng
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+            int currentValue = (int)Mathf.Lerp(startValue, endValue, t);
+
+            foreach (TextMeshProUGUI moneyText in moneysText)
+                moneyText.text = currentValue.ToString();
+
+            yield return null;
+        }
+
+        foreach (TextMeshProUGUI moneyText in moneysText)
+            moneyText.text = endValue.ToString();
+    }
+
+    public int GetCoins()
+    {
+        return money;
     }
 }

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e761a20dc82d74e902abbb2e8b98cc, type: 3}
   m_Name: Aka
   m_EditorClassIdentifier: 
-  gunName: Aka
+  gunName: AK-47
   cooldown: 1
   bulletsPerShot: 2
-  damage: 40
+  damage: 250
   gunSprite: {fileID: 21300000, guid: 6daa3f6a352f79145aefc2d43a4c5f9b, type: 3}
   firePointOffset: {x: 0.3874, y: 0.0126}

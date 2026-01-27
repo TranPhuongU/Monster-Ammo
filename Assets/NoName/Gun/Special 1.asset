@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e761a20dc82d74e902abbb2e8b98cc, type: 3}
   m_Name: Special 1
   m_EditorClassIdentifier: 
-  gunName: Sung Truong
+  gunName: Shotgun
   cooldown: 2
   bulletsPerShot: 8
-  damage: 30
+  damage: 300
   gunSprite: {fileID: 21300000, guid: 2f47926d58070d44a835264db628f60e, type: 3}
   firePointOffset: {x: 0.4007, y: 0.0449}

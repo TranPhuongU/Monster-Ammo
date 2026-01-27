@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CanonController : MonoBehaviour
 {
@@ -12,6 +15,7 @@ public class CanonController : MonoBehaviour
     [SerializeField] private ObjectPool bulletPool;
     [SerializeField] private Transform firePoint;
     [SerializeField] private float bulletSpeed;
+    [SerializeField] private float bulletAmount;
 
     [SerializeField] private ParticleSystem fireEffect;
 
@@ -31,6 +35,10 @@ public class CanonController : MonoBehaviour
     private Animator anim;
     private bool canMove;
 
+    [SerializeField] private TextMeshPro bulletAmountText;
+
+    public static Action onShoot;
+
     private void Awake()
     {
         if (instance != null)
@@ -45,6 +53,8 @@ public class CanonController : MonoBehaviour
         canMove = true;
         fireTimer = fireCooldown;
         lastPosition = transform.position;
+
+        UpdateBulletAmountUI();
 
         GameManager.onGameStateChanged += GameStateChangedCallback;
     }
@@ -74,6 +84,10 @@ public class CanonController : MonoBehaviour
 
     private void ManageControl()
     {
+        if (IsPointerOverUI())
+            return;
+
+
         if (Input.GetMouseButtonDown(0))
         {
             clickedScreenPosition = Input.mousePosition;
@@ -92,7 +106,7 @@ public class CanonController : MonoBehaviour
 
             transform.position = position;
 
-            if (fireTimer <= 0)
+            if (fireTimer <= 0 & bulletAmount > 0)
             {
                 fireTimer = fireCooldown;
                 Shoot();
@@ -124,10 +138,21 @@ public class CanonController : MonoBehaviour
         fireEffect.Stop();
         fireEffect.Play();
 
+        onShoot?.Invoke();
+
+        bulletAmount--;
+
+        UpdateBulletAmountUI();
+
         GameObject bullet = bulletPool.GetObject();
         bullet.transform.position = firePoint.position;
         bullet.GetComponent<Bullet>().ResetBullet();
         bullet.GetComponent<Bullet>().CanAddBullet(true);
+    }
+
+    private void UpdateBulletAmountUI()
+    {
+        bulletAmountText.text = bulletAmount.ToString();
     }
 
     public void AddBullet(Transform bulletPos, int index, int total)
@@ -150,6 +175,33 @@ public class CanonController : MonoBehaviour
     {
         return bulletPool;
     }
+
+    private bool IsPointerOverUI()
+    {
+        if (EventSystem.current == null)
+            return false;
+
+#if UNITY_EDITOR || UNITY_STANDALONE
+        return EventSystem.current.IsPointerOverGameObject();
+#elif UNITY_ANDROID || UNITY_IOS
+    if (Input.touchCount > 0)
+    {
+        for (int i = 0; i < Input.touchCount; i++)
+        {
+            if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(i).fingerId))
+                return true;
+        }
+    }
+    return false;
+#elif UNITY_WEBGL
+    // WebGL: Chuột dùng pointerId = -1
+    return EventSystem.current.IsPointerOverGameObject(-1);
+#else
+    return false;
+#endif
+    }
+
+
 
     private void StartMoving() => canMove = true;
     private void StopMoving() => canMove = false;
